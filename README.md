@@ -1,6 +1,7 @@
 ## University Management System – Villanova University Portal
 
-**Overview**
+**Overview:**
+
 The University Management System is a Python + PostgreSQL project that provides a menu-driven interface to manage various aspects of university operations.
 It is designed for students, faculty, and administrators to access academic details, manage admissions, check fees, and contact student support services in one place.
 
@@ -51,15 +52,39 @@ CREATE TABLE faculty (
 ```
 - Bachelor Students Table
 ```
-ALTER TABLE bachler 
-ADD COLUMN total_fees NUMERIC(10,2),
-ADD COLUMN pending_fees NUMERIC(10,2);
+CREATE TABLE bachler (
+    student_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    gender VARCHAR(20),
+    mothersname VARCHAR(100),
+    fathersname VARCHAR(100),
+    dob DATE,
+    permanentaddress TEXT,
+    contactnumber VARCHAR(20),
+    mailid VARCHAR(100),
+    nationality VARCHAR(50),
+    board VARCHAR(100),
+    total_fee NUMERIC(10,2) DEFAULT 0,
+    pending_fee NUMERIC(10,2) DEFAULT 0
+);
 ```
 - Master Students Table
 ```
-ALTER TABLE master 
-ADD COLUMN total_fees NUMERIC(10,2),
-ADD COLUMN pending_fees NUMERIC(10,2);
+CREATE TABLE master (
+    student_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    gender VARCHAR(20),
+    mothersname VARCHAR(100),
+    fathersname VARCHAR(100),
+    dob DATE,
+    permanentaddress TEXT,
+    contactnumber VARCHAR(20),
+    mailid VARCHAR(100),
+    nationality VARCHAR(50),
+    board VARCHAR(100),
+    total_fee NUMERIC(10,2) DEFAULT 0,
+    pending_fee NUMERIC(10,2) DEFAULT 0
+);
 ```
 
 ---
