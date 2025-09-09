@@ -94,8 +94,4 @@ CREATE TABLE master (
 - Create required tables (courses, faculty, bachler, master).
 - Insert sample data (courses, faculty, students).
 - Install dependencies: pip install psycopg2 tabulate
-
-
-Run the program in IDLE or terminal:
-
-python university_portal.py
+- Run the program in IDLE or terminal: python university_portal.py
